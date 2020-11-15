@@ -9,5 +9,5 @@ uwsgi --ini /home/stefan/stefan/uwsgi.ini
 
 On the server venv:
 ```console
-pip install wheel uwsgi Werkzeug pyOpenSSL psycopg2-binary
+pip install wheel uwsgi Werkzeug pyOpenSSL
 ```
