@@ -1,0 +1,11 @@
+{% load static i18n %}
+
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <p>
+            {% trans "To log in or register, please click on the logo below" %}
+        </p>
+        <a href="https://id.stefan.indoorsman.ee{% url 'eeidcard_auth' %}"><img
+                src="{% static 'id_kaart-300x61.png' %}" alt="{% trans "Log in with ID-card" %}"/></a>
+    </div>
+</div>

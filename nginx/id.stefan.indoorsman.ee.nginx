@@ -1,0 +1,58 @@
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+
+    server_name id.stefan.indoorsman.ee;
+
+    ssl_certificate /etc/letsencrypt/live/stefan.indoorsman.ee/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/stefan.indoorsman.ee/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/stefan.indoorsman.ee/chain.pem;
+
+    ssl_client_certificate /etc/ssl/certs/EID_Bundle.pem;
+    ssl_verify_client on;
+    ssl_verify_depth 2;
+
+    include nginxconfig.io/security.conf;
+
+    location / {
+        # proxy_pass https://stefan.indoorsman.ee/accounts/eeidcard/auth/;
+        # proxy_pass http://localhost:8002;
+        uwsgi_pass django;
+
+        # proxy_set_header Host $host;
+        proxy_set_header SSL-CLIENT-VERIFY $ssl_client_verify;
+        proxy_set_header SSL-CLIENT-CERT $ssl_client_escaped_cert;
+
+        include uwsgi_params;
+
+        # proxy_redirect      http://localhost:8002 $host;
+
+        #expires -1;
+        #proxy_set_header        X-Real-IP $remote_addr;
+        #proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        #proxy_set_header        X-Forwarded-Proto $scheme;
+
+        #proxy_set_header        SSL-CLIENT-S-DN $ssl_client_s_dn;
+        #proxy_set_header        SSL-CLIENT-V-START $ssl_client_v_start;
+        #proxy_set_header        SSL-CLIENT-V-END $ssl_client_v_end;
+        #proxy_set_header        SSL-CLIENT-I-DN $ssl_client_i_dn;
+
+        # proxy_pass          http://localhost:8002;
+        # proxy_read_timeout  90;
+    }
+
+    include nginxconfig.io/general.conf;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name .id.stefan.indoorsman.ee;
+
+    include nginxconfig.io/letsencrypt.conf;
+
+    location / {
+        return 301 https://id.stefan.indoorsman.ee$request_uri;
+    }
+}

@@ -1,4 +1,3 @@
 django
 django-allauth
-mod_wsgi
-psycopg2
+pytest-django
