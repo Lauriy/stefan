@@ -1,5 +1,5 @@
 ![Python application](https://github.com/Lauriy/stefan/workflows/Python%20application/badge.svg)
-[![codecov](https://codecov.io/gh/Lauriy/stefan/branch/master/graph/badge.svg)](https://codecov.io/gh/Lauriy/ember-online-bot)
+[![codecov](https://codecov.io/gh/Lauriy/stefan/branch/master/graph/badge.svg)](https://codecov.io/gh/Lauriy/stefan)
 
 # Tests
 ```console
