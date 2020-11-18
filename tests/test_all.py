@@ -1,4 +1,11 @@
+import datetime
+
+import pytest
+from django.contrib.auth.models import User
+
 from allauth_addons.socialaccount.providers.eeidcard.views import parse_cert
+from stefan.estonian_national_id import convert_to_birthdate, SEX_MALE, get_sex
+from stefan.models import Party, Vote
 
 
 def test_certificate_parsing():
@@ -8,3 +15,22 @@ def test_certificate_parsing():
     assert person.first_name == 'LAURI'
     assert person.last_name == 'ELIAS'
     assert person.national_id == '39004020251'
+
+
+def test_national_id_parsing():
+    national_id = '39004020251'
+
+    assert convert_to_birthdate(national_id) == datetime.date(year=1990, month=4, day=2)
+    assert get_sex(national_id) == SEX_MALE
+
+
+@pytest.mark.django_db
+def test_retrieve_all_votes(client, db):
+    party_name = 'Eesti Reformierakond'
+    party = Party.objects.create(name=party_name, code=80043147)
+    user = User.objects.create(username='39004020251')
+    Vote.objects.create(user=user, party=party)
+
+    response = client.get('/api/v1/votes/')
+
+    assert response.json()[0]['party'] == party_name

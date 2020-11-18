@@ -1,6 +1,15 @@
 django
 django-allauth
+django-compressor
 django-extensions
+django-stubs
+djangorestframework
+djangorestframework-stubs
+flake8
+markdown
+mypy
 psycopg2-binary
 pytest-cov
 pytest-django
+pytest-mypy
+pytest-mypy-plugins

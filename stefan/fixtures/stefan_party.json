@@ -1,0 +1,128 @@
+[
+  {
+    "model": "stefan.party",
+    "pk": 1,
+    "fields": {
+      "name": "Eesti Iseseisvuspartei",
+      "code": 80051885,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 2,
+    "fields": {
+      "name": "Eesti Keskerakond",
+      "code": 80053370,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 3,
+    "fields": {
+      "name": "Eesti Konservatiivne Rahvaerakond",
+      "code": 80040344,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 4,
+    "fields": {
+      "name": "EESTIMAA ÜHENDATUD VASAKPARTEI",
+      "code": 80060022,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 5,
+    "fields": {
+      "name": "Eesti Reformierakond",
+      "code": 80043147,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 6,
+    "fields": {
+      "name": "Eesti Vabaduspartei - Põllumeeste Kogu",
+      "code": 80051862,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 7,
+    "fields": {
+      "name": "Eesti Vabaerakond",
+      "code": 80366548,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 8,
+    "fields": {
+      "name": "Elurikkuse Erakond",
+      "code": 80557923,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 9,
+    "fields": {
+      "name": "Erakond Eesti 200",
+      "code": 80551335,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 10,
+    "fields": {
+      "name": "Erakond Eestimaa Rohelised",
+      "code": 80223139,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 11,
+    "fields": {
+      "name": "ISAMAA Erakond",
+      "code": 80243584,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 12,
+    "fields": {
+      "name": "Sotsiaaldemokraatlik Erakond",
+      "code": 80052459,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 13,
+    "fields": {
+      "name": "Erakond Rahva Tahe",
+      "code": 80557886,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  },
+  {
+    "model": "stefan.party",
+    "pk": 14,
+    "fields": {
+      "name": "Rahva Ühtsuse Erakond",
+      "code": 80374223,
+      "created": "2020-11-18T23:00:00.000Z"
+    }
+  }
+]

@@ -1,11 +1,8 @@
-import json
-
-from allauth.socialaccount.providers.base import ProviderAccount, Provider
-from django.template.loader import render_to_string
-from django.template import RequestContext
-from django.utils.html import escapejs
+import datetime
+from typing import Union
 
 from allauth.socialaccount import providers
+from allauth.socialaccount.providers.base import ProviderAccount, Provider
 
 
 class EstonianIdCardAccount(ProviderAccount):
